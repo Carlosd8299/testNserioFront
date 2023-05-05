@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Last Order Date</th>
+          <th scope="col">Next Predicted Order</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of predictedOrders">
+          <td>{{order.customerName}}</td>
+          <td>{{order.lastOrderDate}}</td>
+          <td>{{order.nextPredictedOrder}}</td>
+          <td class="text-nowrap">
+            <a data-toggle="tooltip" data-original-title="View">
+              <i style="color: red;">View Orders</i>
+            </a>
+            <a style="color: green;" data-toggle="tooltip" data-original-title="New">
+              <i>New Order</i>
+            </a>
+          </td>
+      </tbody>
+    </table>
+  </div>
+</div>
+
